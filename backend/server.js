@@ -8,7 +8,7 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors()); // middlware
+// app.use(cors()); // middlware
 app.use(express.json());
 
 const uri = process.env.ATLAS_URI;
