@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-// const cors = require("cors");
+const cors = require("cors");
 const mongoose = require("mongoose");
 
 require("dotenv").config();
@@ -8,7 +8,7 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-// app.use(cors()); // middlware
+app.use(cors()); // middlware
 app.use(express.json());
 
 const uri = process.env.ATLAS_URI;
